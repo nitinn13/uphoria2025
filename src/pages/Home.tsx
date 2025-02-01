@@ -10,6 +10,8 @@ import prizepool from '../assets/Frame 11.svg';
 import Artists from '../components/Artists';
 import Navbar from '../components/Navbar';
 import Explore from '../components/Explore';
+import LeftFlowersParallax from '../components/Flower';
+import RightFlowersParallax from '../components/FlowerRotated';
 
 
 const categories = [
@@ -143,6 +145,8 @@ const Home = () => {
 
     <div className="overflow-hidden">
       <Navbar />
+      <LeftFlowersParallax/>
+      <RightFlowersParallax/>
       {/* Floating Hearts Background */}
       <div className="fixed inset-0 pointer-events-none ">
         {[...Array(100)].map((_, i) => (
@@ -173,6 +177,7 @@ const Home = () => {
 
           <div className="mt-6">
             <Explore />
+            {/* <LeftFlowersParallax/> */}
           </div>
 
           <p className="mt-6 max-w-3xl font-colombo text-xl animate-gradient-text">
