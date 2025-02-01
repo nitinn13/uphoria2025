@@ -164,8 +164,8 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center items-center px-4 text-center mt-32">
-        <div data-aos="fade-up">
+      <section className="min-h-screen flex flex-col justify-center items-center px-4 text-center mt-32 ">
+        <div data-aos="fade-up" className='space-y-14'>
           {/* Uncomment if the heart animation is needed */}
           {/* <div className="flex justify-center mb-6">
       <Heart className="h-20 w-20 text-white animate-heartbeat" />
@@ -180,7 +180,7 @@ const Home = () => {
             {/* <LeftFlowersParallax/> */}
           </div>
 
-          <p className="mt-6 max-w-3xl font-colombo text-xl animate-gradient-text">
+          <p className=" max-w-3xl font-colombo text-xl animate-gradient-text pt-32">
             A melange of social and cultural activities filled with an adrenaline rush of participants across colleges, the magnum opus event of Bennett University rightfully stands up to its namesake, <strong>UPHORIA</strong>.
           </p>
           <div className='ml-7'>

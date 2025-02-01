@@ -19,12 +19,11 @@ const Navbar = () => {
   const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   return (
-    <nav className="w-full bg-[#752E50] backdrop-blur-md z-50 py-3 px-5 ">
+    <nav className="w-full bg-[#742E50] py-3 px-9 mt-6 shadow-xl relative z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Navigation Links with Responsive Font Size and Scrollable */}
         <div className="flex items-center space-x-3 md:space-x-14 font-colombo text-xs md:text-base lg:text-lg overflow-x-auto">
           <Link to="/" className="text-pink-100 hover:text-pink-400 transition-colors">Home</Link>
-          {/* <a href="#timeline" className="text-pink-100 hover:text-pink-400 transition-colors">Timeline</a> */}
           <a href="#events" className="text-pink-100 hover:text-pink-400 transition-colors">Events</a>
           <a href="#gallery" className="text-pink-100 hover:text-pink-400 transition-colors">Gallery</a>
           <a href="#" className="text-pink-100 hover:text-pink-400 transition-colors">Sponsors</a>
@@ -38,6 +37,11 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
+      {/* Flare Effect */}
+      {/* <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-r from-[#752E50] via-[#A74A8A] to-[#752E50] opacity-30"></div> */}
+      <div className="absolute top-0 left-0 w-7 h-full bg-gradient-to-r from-white to-transparent opacity-40"></div>
+      <div className="absolute top-0 right-0 w-7 h-full bg-gradient-to-l from-white to-transparent opacity-40"></div>
     </nav>
   );
 };
