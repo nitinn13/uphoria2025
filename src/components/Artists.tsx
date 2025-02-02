@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Heart, Instagram, Spotify } from 'lucide-react';
+import rsoon from '../assets/artsist/rsoon.png';
+import akash from '../assets/artsist/akash.jpg';
+
+
 
 interface Artist {
     name: string;
@@ -13,47 +17,47 @@ interface Artist {
 const artists: Artist[] = [
     {
         name: 'Akash',
-        image: 'https://images.unsplash.com/photo-1618436917352-cd3d11ea4d15',
+        image: akash,
+        instagram: 'https://www.instagram.com/akashlife',
+        spotify: 'https://open.spotify.com',
+        desc: 'description of artist',
+        day: 1
+    },
+    {
+        name: 'Revealing Soon',
+        image: rsoon,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
         day: 1
     },
     {
-        name: 'Luna',
-        image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7',
-        instagram: 'https://www.instagram.com',
-        spotify: 'https://open.spotify.com',
-        desc: 'description of artist',
-        day: 1
-    },
-    {
-        name: 'The Groove',
-        image: 'https://images.unsplash.com/photo-1598387993441-a364f854c3e1',
+        name: 'Revealing Soon',
+        image: rsoon,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
         day: 2
     },
     {
-        name: 'DJ Nova',
-        image: 'https://images.unsplash.com/photo-1571266028243-e4733b0f0bb1',
+        name: 'Revealing Soon',
+        image: rsoon,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
         day: 2
     },
     {
-        name: 'Rhythm Kings',
-        image: 'https://images.unsplash.com/photo-1501612780327-45045538702b',
+        name: 'Revealing Soon',
+        image: rsoon,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
         day: 3
     },
     {
-        name: 'Echo',
-        image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f',
+        name: 'Revealing Soon ',
+        image: rsoon,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
@@ -66,8 +70,7 @@ const Artists = () => {
 
     return (
         // <div className="min-h-screen bg-gradient-to-b from-pink-900 via-purple-900 to-pink-900 pt-20 pb-12">
-        <div className="min-h-screen  pt-20 pb-12">
-
+        <div className="min-h-screen pt-20 pb-12">
             {/* Floating Hearts Background */}
             <div className="fixed inset-0 pointer-events-none">
                 {[...Array(15)].map((_, i) => (
@@ -86,18 +89,18 @@ const Artists = () => {
 
             <div className="container mx-auto px-4">
                 {/* Title */}
-                <h1 className="text-6xl font-bold text-center mb-12 font-colombo">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 font-colombo">
                     Artists
                 </h1>
 
                 {/* Day Filter */}
-                <div className="flex justify-center mb-16">
+                <div className="flex justify-center mb-10">
                     <div className="bg-white/10 backdrop-blur-md rounded-full p-1 border border-pink-500/30">
                         {[1, 2, 3].map((day) => (
                             <button
                                 key={day}
                                 onClick={() => setSelectedDay(day)}
-                                className={`px-8 py-2 rounded-full transition-all ${selectedDay === day
+                                className={`px-6 py-2 sm:px-8 sm:py-3 rounded-full transition-all text-sm sm:text-base md:text-lg ${selectedDay === day
                                     ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'
                                     : 'text-pink-200 hover:text-white'
                                     }`}
@@ -110,13 +113,13 @@ const Artists = () => {
 
                 {/* Artists Grid */}
                 <div className="flex justify-center">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-16">
                         {artists
                             .filter((artist) => artist.day === selectedDay)
                             .map((artist, index) => (
                                 <div
                                     key={index}
-                                    className="relative group h-[60vh] w-[30vw] rounded-2xl overflow-hidden aspect-square"
+                                    className="relative group h-[50vh] sm:h-[55vh] md:h-[60vh] w-full sm:w-[45vw] md:w-[30vw] rounded-2xl overflow-hidden aspect-square"
                                     data-aos="fade-up"
                                     data-aos-delay={index * 100}
                                 >
@@ -131,17 +134,38 @@ const Artists = () => {
                                     <div className="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <div className="absolute inset-0 p-6 flex flex-col justify-around">
                                             <div>
-                                                <h3 className="text-3xl font-bold text-white mb-2 font-colombo">{artist.name}</h3>
-                                                <h4 className="text-xl text-white mb-2">{artist.desc}</h4>
+                                                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 font-colombo">
+                                                    {artist.name}
+                                                </h3>
+                                                <h4 className="text-lg sm:text-xl text-white mb-2">
+                                                    {artist.desc}
+                                                </h4>
                                             </div>
                                             <div className="space-y-2 text-pink-200">
-                                                <h3 className="text-xl font-bold text-white mb-2 font-colombo">Follow on</h3>
+                                                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 font-colombo">
+                                                    Follow on
+                                                </h3>
                                                 <p className="flex items-center gap-2">
-                                                    <a href={artist.instagram} target='_blank' className='cursor-pointer'>Instagram</a>
-                                                    <Instagram className="h-6 w-6" />
+                                                    <a
+                                                        href={artist.instagram}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex items-center gap-2 cursor-pointer pointer-events-auto"
+                                                    >
+                                                        Instagram
+                                                        <Instagram className="h-6 w-6" />
+                                                    </a>
+
                                                 </p>
+
                                                 <p className="flex items-center gap-2">
-                                                    <a href={artist.spotify} target='_blank' className='cursor-pointer'>Spotify</a>
+                                                    <a
+                                                        href={artist.spotify}
+                                                        target="_blank"
+                                                        className="cursor-pointer"
+                                                    >
+                                                        Spotify
+                                                    </a>
                                                 </p>
                                             </div>
                                         </div>
@@ -155,10 +179,9 @@ const Artists = () => {
                             ))}
                     </div>
                 </div>
-
-
             </div>
         </div>
+
     );
 };
 

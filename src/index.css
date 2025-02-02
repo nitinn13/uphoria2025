@@ -98,3 +98,6 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+a {
+  pointer-events: auto;
+}

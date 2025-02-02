@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Navbar from './components/Navbar';
 import Home from './pages/Home';
+// import TempHome from './pages/Temphome';
 import EventCategory from './pages/EventCategory';
 import Footer from './components/Footer';
 
@@ -29,6 +30,8 @@ function App() {
         {/* <Navbar /> */}
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/temp" element={<TempHome />} /> */}
+
           <Route path="/category/:categoryId" element={<EventCategory />} />
         </Routes>
         <Footer />
