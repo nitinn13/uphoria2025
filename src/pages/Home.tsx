@@ -1,6 +1,6 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { Music, Ambulance as Dance, Palette, Theater, Camera, Gamepad, BookOpen, Telescope, Heart, Loader, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Music, Drum as Dance, Palette, Theater, Clapperboard, Camera, Gamepad, BookOpen, Telescope, Heart, Loader, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import logo from '../assets/text 49.svg';
@@ -21,7 +21,7 @@ const categories = [
   { id: 'dance', name: 'Dance', icon: Dance, description: 'Express yourself through movement and rhythm' },
   { id: 'arts', name: 'Arts', icon: Palette, description: 'Let your creativity flow through visual arts' },
   { id: 'drama', name: 'Drama', icon: Theater, description: 'Bring stories to life on stage' },
-  { id: 'fashion', name: 'Fashion', icon: Camera, description: 'Walk the ramp and showcase your style' },
+  { id: 'fashion', name: 'Fashion', icon: Clapperboard, description: 'Walk the ramp and showcase your style' },
   { id: 'gaming', name: 'Gaming', icon: Gamepad, description: 'Compete in exciting gaming tournaments' },
   { id: 'literary', name: 'Literary', icon: BookOpen, description: 'Express yourself through words' },
   { id: 'photography', name: 'Photography', icon: Camera, description: 'Capture moments that tell stories' },
