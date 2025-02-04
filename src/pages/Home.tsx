@@ -13,6 +13,8 @@ import LeftFlowersParallax from '../components/Flower';
 import RightFlowersParallax from '../components/FlowerRotated';
 import Timeline from '../components/Timeline';
 import Contactinfo from '../components/Contactinfo';
+import animatedlogo from '../assets/animatedlogo.mp4';
+import animatedlogoMobile from '../assets/animatedlogomobile.mp4';
 
 // Move Artists to lazy loading only
 const Artists = lazy(() => import('../components/Artists'));
@@ -74,14 +76,15 @@ const CategoryCard = React.memo(({ category, index }) => (
 ));
 
 const LoadingScreen = () => (
-  <div className="fixed inset-0 bg-gradient-to-br from-pink-500 to-purple-900 z-50 flex items-center justify-center">
-    <div className="relative">
-      <Heart className="h-24 w-24 text-white animate-pulse" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Loader className="h-12 w-12 text-white animate-spin" />
-      </div>
-    </div>
-  </div>
+  
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+  <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+    <source src={animatedlogoMobile} media="(max-width: 768px)" />
+    <source src={animatedlogo} media="(min-width: 769px)" />
+  </video>
+</div>
+
+
 );
 
 const Home = () => {
@@ -93,11 +96,11 @@ const Home = () => {
     AOS.init({
       duration: 600,
       once: true,
-      disable: window.innerWidth < 768,
+      disable: false,
     });
 
     // Reduce initial loading time
-    const timer = setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 8000);
     return () => clearTimeout(timer);
   }, []);
 

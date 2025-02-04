@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Instagram} from 'lucide-react';
+import { Heart, Instagram } from 'lucide-react';
 import rsoon from '../assets/artsist/rsoon.png';
 import akash from '../assets/artsist/akash.jpg';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,6 +21,14 @@ const artists: Artist[] = [
         name: 'Akash',
         image: akash,
         instagram: 'https://www.instagram.com/akashlife',
+        spotify: 'https://open.spotify.com',
+        desc: 'description of artist',
+        day: 1
+    },
+    {
+        name: 'Revealing Soon',
+        image: rsoon,
+        instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
         day: 1
@@ -107,79 +115,74 @@ const Artists = () => {
                 </div>
 
                 {/* Artists Grid */}
-                <div className="flex justify-center">
-                    
-                    <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
-                        {artists
-                            .filter((artist) => artist.day === selectedDay)
-                            .map((artist, index) => (
-                                <div
-                                    key={index}
-                                    className="relative group 
+<div className="flex justify-center">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 justify-center w-full px-4">
+        {artists
+            .filter((artist) => artist.day === selectedDay)
+            .map((artist, index) => (
+                <div
+                    key={index}
+                    className="relative group 
                    h-[40vh] sm:h-[45vh] md:h-[60vh] 
-                   w-[90%] sm:w-[50%] md:w-[30vw] 
+                   w-full sm:w-[80%] md:w-[30vw] 
                    max-w-[400px] 
-                   rounded-2xl overflow-hidden aspect-square"
-                                    data-aos="fade-up"
-                                    data-aos-delay={index * 100}
-                                >
-                                    {/* Artist Image */}
-                                    <img
-                                        src={artist.image}
-                                        alt={artist.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
+                   rounded-2xl overflow-hidden aspect-square mx-auto"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                >
+                    {/* Artist Image */}
+                    <img
+                        src={artist.image}
+                        alt={artist.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
 
-                                    {/* Hover Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-around">
-                                            <div>
-                                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 font-colombo">
-                                                    {artist.name}
-                                                </h3>
-                                                
-                                            </div>
-                                            <div className="space-y-2 text-pink-200">
-                                                <h3 className="text-base sm:text-lg font-bold text-white mb-2 font-colombo">
-                                                    Follow on
-                                                </h3>
-                                                <p className="flex items-center gap-2">
-                                                    <a
-                                                        href={artist.instagram}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 cursor-pointer"
-                                                    >
-                                                        Instagram
-                                                        <Instagram className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-                                                    </a>
-                                                </p>
-                                                <p className="flex items-center gap-2">
-                                                    <a
-                                                        href={artist.spotify}
-                                                        target="_blank"
-                                                        className="cursor-pointer"
-                                                    >
-                                                        Spotify
-                                                        {/* <FontAwesomeIcon icon="fa-brands fa-spotify" /> */}
-                                                        
-                                                    </a>
-                                                    <FaSpotify className="h-5 w-5 text-white" />
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Decorative Frame */}
-                                    <div className="absolute inset-0 border-2 sm:border-4 border-pink-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <div className="absolute inset-[1px] sm:inset-[2px] border border-pink-400/20"></div>
-                                    </div>
-                                </div>
-                            ))}
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-pink-900/90 via-purple-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-around">
+                            <div>
+                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 font-colombo">
+                                    {artist.name}
+                                </h3>
+                            </div>
+                            <div className="space-y-2 text-pink-200">
+                                <h3 className="text-base sm:text-lg font-bold text-white mb-2 font-colombo">
+                                    Follow on
+                                </h3>
+                                <p className="flex items-center gap-2">
+                                    <a
+                                        href={artist.instagram}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 cursor-pointer"
+                                    >
+                                        Instagram
+                                        <Instagram className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
+                                    </a>
+                                </p>
+                                <p className="flex items-center gap-2">
+                                    <a
+                                        href={artist.spotify}
+                                        target="_blank"
+                                        className="cursor-pointer"
+                                    >
+                                        Spotify
+                                    </a>
+                                    <FaSpotify className="h-5 w-5 text-white" />
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-
+                    {/* Decorative Frame */}
+                    <div className="absolute inset-0 border-2 sm:border-4 border-pink-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-[1px] sm:inset-[2px] border border-pink-400/20"></div>
+                    </div>
                 </div>
+            ))}
+    </div>
+</div>
+
             </div>
         </div>
 

@@ -2,8 +2,14 @@ import React from 'react';
 import { Instagram, Facebook, Twitter, Linkedin } from 'lucide-react';
 import address from '../assets/footer/Group 75.svg';
 import bennett from '../assets/footer/Bennett University.svg';
-import { div } from 'framer-motion/client';
-import facebookicon from '../assets/footer/l1.svg';
+import nitin from '../assets/techteam/nitin.jpg';
+import parth from '../assets/techteam/parth.jpg';
+import sankalp from '../assets/techteam/sankalp.png';
+import soumya from '../assets/techteam/soumya.jpg';
+import hardik from '../assets/techteam/Hardik Jain .jpg';
+import naman from '../assets/techteam/Naman Sharma.jpg';
+
+
 
 const Footer = () => {
   return (
@@ -38,34 +44,34 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/nitin-kumar-jha" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                    <img src="/nitin.jpg" alt="Nitin Jha" className="relative rounded-full w-12 h-12 object-cover border-2 border-blue-500" />
+                    <img src={nitin} alt="Nitin Jha" className="relative rounded-full w-12 h-12 object-cover border-2 border-blue-500" />
                   </div>
                 </a>
 
                 <a href="https://www.linkedin.com/in/parth-singh427" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                    <img src="/parth.jpg" alt="Parth Pankaj Singh" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
+                    <img src={parth} alt="Parth Pankaj Singh" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
                   </div>
                 </a>
 
                 <a href="https://www.linkedin.com/in/soumyasmitsingh/" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                    <img src="/soumya.jpg" alt="Soumya Singh" className="relative rounded-full w-12 h-12 object-cover border-2 border-pink-500" />
+                    <img src={soumya} alt="Soumya Singh" className="relative rounded-full w-12 h-12 object-cover border-2 border-pink-500" />
                   </div>
                 </a>
 
                 <a href="https://www.linkedin.com/in/sankalp-tiwari-79967321a/" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                    <img src="/sankalp.png" alt="Sankalp Tiwari" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
+                    <img src={sankalp} alt="Sankalp Tiwari" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
                   </div>
                 </a>
                 <a href="https://www.linkedin.com/in/sankalp-tiwari-79967321a/" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                    <img src="/hardik.png" alt="Hardik " className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
+                    <img src={hardik} alt="Hardik Jain" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
                   </div>
                 </a>
                 <a href="https://www.linkedin.com/in/sankalp-tiwari-79967321a/" target="_blank" rel="noopener noreferrer">
@@ -77,7 +83,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/sankalp-tiwari-79967321a/" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
-                    <img src="/naman.png" alt="Naman" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
+                    <img src={naman} alt="Naman Sharma" className="relative rounded-full w-12 h-12 object-cover border-2 border-purple-500" />
                   </div>
                 </a>
               </div>
