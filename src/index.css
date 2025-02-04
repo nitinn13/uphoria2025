@@ -4,8 +4,8 @@
 
 @font-face {
   font-family: 'Colombo SF';
-  src: url('../src/assets/fonts/Columbo\ SF\ Regular.ttf') format('woff2'),
-       url('../src/assets/fonts/Columbo\ SF\ Regular.ttf') format('truetype');
+  src: url('../static/fonts/Columbo\ SF\ Regular.ttf') format('woff2'),
+       url('../static/fonts/Columbo\ SF\ Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
