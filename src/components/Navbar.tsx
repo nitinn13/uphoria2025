@@ -24,10 +24,10 @@ const Navbar = () => {
         {/* Navigation Links with Responsive Font Size and Scrollable */}
         <div className="flex items-center space-x-3 md:space-x-14 font-colombo text-xs md:text-base lg:text-lg overflow-x-auto">
           <Link to="/" className="text-pink-100 hover:text-pink-400 transition-colors">Home</Link>
-          <a href="#events" className="text-pink-100 hover:text-pink-400 transition-colors">Events</a>
-          <a href="#gallery" className="text-pink-100 hover:text-pink-400 transition-colors">Gallery</a>
-          <a href="#" className="text-pink-100 hover:text-pink-400 transition-colors">Sponsors</a>
-          <a href="#" className="text-pink-100 hover:text-pink-400 transition-colors">Accommodation</a>
+          <a href="/#events" className="text-pink-100 hover:text-pink-400 transition-colors">Events</a>
+          <Link to="/gallery" className="text-pink-100 hover:text-pink-400 transition-colors">Gallery</Link>
+          <Link to="/sponsors" className="text-pink-100 hover:text-pink-400 transition-colors">Sponsors</Link>
+          <Link to="/accommodation" className="text-pink-100 hover:text-pink-400 transition-colors">Accommodation</Link>
         </div>
 
         {/* Theme Toggle Button */}

@@ -48,6 +48,14 @@ const artists: Artist[] = [
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
         day: 3
+    },
+    {
+        name: 'Revealing Soon',
+        image: rsoon,
+        instagram: 'https://www.instagram.com',
+        spotify: 'https://open.spotify.com',
+        desc: 'description of artist',
+        day: 3
     }
 
 ];
@@ -129,9 +137,7 @@ const Artists = () => {
                                                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 font-colombo">
                                                     {artist.name}
                                                 </h3>
-                                                <h4 className="text-sm sm:text-base md:text-lg text-white mb-2">
-                                                    {artist.desc}
-                                                </h4>
+                                                
                                             </div>
                                             <div className="space-y-2 text-pink-200">
                                                 <h3 className="text-base sm:text-lg font-bold text-white mb-2 font-colombo">

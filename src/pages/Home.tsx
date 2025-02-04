@@ -12,20 +12,21 @@ import Explore from '../components/Explore';
 import LeftFlowersParallax from '../components/Flower';
 import RightFlowersParallax from '../components/FlowerRotated';
 import Timeline from '../components/Timeline';
+import Contactinfo from '../components/Contactinfo';
 
 // Move Artists to lazy loading only
 const Artists = lazy(() => import('../components/Artists'));
 
 const categories = [
-  { id: 'music', name: 'Music', icon: Music, description: 'From classical to contemporary, showcase your musical talent' },
-  { id: 'dance', name: 'Dance', icon: Dance, description: 'Express yourself through movement and rhythm' },
-  { id: 'arts', name: 'Arts', icon: Palette, description: 'Let your creativity flow through visual arts' },
-  { id: 'drama', name: 'Drama', icon: Theater, description: 'Bring stories to life on stage' },
-  { id: 'fashion', name: 'Fashion', icon: Clapperboard, description: 'Walk the ramp and showcase your style' },
-  { id: 'gaming', name: 'Gaming', icon: Gamepad, description: 'Compete in exciting gaming tournaments' },
-  { id: 'literary', name: 'Literary', icon: BookOpen, description: 'Express yourself through words' },
-  { id: 'photography', name: 'Photography', icon: Camera, description: 'Capture moments that tell stories' },
-  { id: 'astronomy', name: 'Astronomy', icon: Telescope, description: 'Explore the wonders of the night sky' },
+  { id: 'music', name: 'Music', icon: Music, description: 'From classical to contemporary, showcase your musical talent', prize: '1.9 Lakh+' },
+  { id: 'dance', name: 'Dance', icon: Dance, description: 'Express yourself through movement and rhythm', prize: '2.85 Lakh+' },
+  { id: 'arts', name: 'Arts', icon: Palette, description: 'Let your creativity flow through visual arts', prize: '1.6 Lakh+' },
+  { id: 'drama', name: 'Drama', icon: Theater, description: 'Bring stories to life on stage', prize: '2.7 Lakh+' },
+  { id: 'fashion', name: 'Fashion', icon: Clapperboard, description: 'Walk the ramp and showcase your style', prize: '1.8 Lakh+' },
+  { id: 'gaming', name: 'Gaming', icon: Gamepad, description: 'Compete in exciting gaming tournaments', prize: '2.5 Lakh+' },
+  { id: 'literary', name: 'Literary', icon: BookOpen, description: 'Express yourself through words', prize: '1.7 Lakh+' },
+  { id: 'photography', name: 'Photography', icon: Camera, description: 'Capture moments that tell stories', prize: '1.5 Lakh+' },
+  { id: 'astronomy', name: 'Astronomy', icon: Telescope, description: 'Explore the wonders of the night sky', prize: '₹50,000' },
 ];
 
 
@@ -59,8 +60,12 @@ const CategoryCard = React.memo(({ category, index }) => (
           <h3 className="text-2xl font-semibold text-pink-100">{category.name}</h3>
         </div>
         <p className="text-pink-200/80 mb-4">{category.description}</p>
+
+        <p className="text-pink-400 font-semibold mb-2">Prize Pool Worth {category.prize} </p>
+
+
         <div className="flex justify-between items-center">
-          <span className="text-pink-400 text-sm">Click to explore events</span>
+          <span className="text-pink-500 text-sm">Click to explore events</span>
           <Heart className="h-6 w-6 text-pink-400 opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
       </div>
@@ -116,10 +121,10 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <Navbar />
+      {/* <Navbar /> */}
       <LeftFlowersParallax />
       <RightFlowersParallax />
-      
+
 
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center items-center px-4 text-center mt-32">
@@ -138,12 +143,21 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center mt-10">
-          <img src={date} alt="Dates" height={600} width={600} />
-          <img src={month} alt="Month" height={400} width={400} />
+          <img
+            src={date}
+            alt="Dates"
+            className="w-48 sm:w-56 md:w-64 lg:w-80 xl:w-[600px] h-auto"
+          />
+          <img
+            src={month}
+            alt="Month"
+            className="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-[400px] h-auto mt-4"
+          />
         </div>
+
       </section>
-      <Timeline />
-      
+
+
 
       {/* Categories Section */}
       <section id="events" className="py-20">
@@ -179,6 +193,8 @@ const Home = () => {
       <Suspense fallback={<div>Loading artists...</div>}>
         <Artists />
       </Suspense>
+      <Timeline />
+      <Contactinfo />
     </div>
   );
 };
