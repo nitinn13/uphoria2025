@@ -14,7 +14,7 @@ import RightFlowersParallax from '../components/FlowerRotated';
 import Timeline from '../components/Timeline';
 import Contactinfo from '../components/Contactinfo';
 import animatedlogo from '../assets/animatedlogo.mp4';
-import animatedlogoMobile from '../assets/animatedlogomobile.mp4';
+import animatedlogoMobile from '../assets/animatedlogomobilecomp.mp4';
 
 // Move Artists to lazy loading only
 const Artists = lazy(() => import('../components/Artists'));
