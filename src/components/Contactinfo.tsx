@@ -19,7 +19,7 @@ const Contactinfo = () => {
           </div>
           <div className="relative ">
             <h2 className="text-xl sm:text-2xl font-semibold text-center text-[#e6c373] ">
-              Uphoria@bennett.edu.in
+              uphoria@bennett.edu.in
             </h2>
             {/* <h2 className="text-xl sm:text-2xl font-semibold text-center text-[#e6c373] ">
               Uphoria@bennett

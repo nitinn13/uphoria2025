@@ -33,7 +33,7 @@ const Navbar = () => {
         {/* Theme Toggle Button */}
         <div>
           <button onClick={toggleTheme} className="text-pink-100">
-            <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} size="2xl" />
+            {/* <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} size="2xl" /> */}
           </button>
         </div>
       </div>
