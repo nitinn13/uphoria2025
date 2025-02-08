@@ -29,7 +29,7 @@ const artists: Artist[] = [
         day: 1
     },
     {
-        name: 'Revealing Soon',
+        name: 'Asar',
         image: asar,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
@@ -45,7 +45,7 @@ const artists: Artist[] = [
         day: 1
     },
     {
-        name: 'Revealing Soon',
+        name: 'Salim Sulaiman',
         image: salimsulaiman,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
@@ -53,7 +53,7 @@ const artists: Artist[] = [
         day: 2
     },
     {
-        name: 'Revealing Soon',
+        name: 'Akhil Sachdeva',
         image: AkhilSachdeva,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
