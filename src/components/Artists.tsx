@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Heart, Instagram } from 'lucide-react';
 import rsoon from '../assets/artsist/rsoon.png';
 import akash from '../assets/artsist/akash.jpg';
+import salimsulaiman from '../assets/artsist/salimsulaiman.jpg'
+import AkhilSachdeva from '../assets/artsist/AkhilSachdeva.jpg'
+import asar from '../assets/artsist/asar.jpg'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaSpotify } from "react-icons/fa";
 
@@ -27,7 +30,7 @@ const artists: Artist[] = [
     },
     {
         name: 'Revealing Soon',
-        image: rsoon,
+        image: asar,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
@@ -43,7 +46,7 @@ const artists: Artist[] = [
     },
     {
         name: 'Revealing Soon',
-        image: rsoon,
+        image: salimsulaiman,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
@@ -51,7 +54,7 @@ const artists: Artist[] = [
     },
     {
         name: 'Revealing Soon',
-        image: rsoon,
+        image: AkhilSachdeva,
         instagram: 'https://www.instagram.com',
         spotify: 'https://open.spotify.com',
         desc: 'description of artist',
@@ -134,7 +137,7 @@ const Artists = () => {
                     <img
                         src={artist.image}
                         alt={artist.name}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        className="w-full h-full transition-transform duration-500 group-hover:scale-110"
                     />
 
                     {/* Hover Overlay */}

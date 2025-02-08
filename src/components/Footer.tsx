@@ -41,7 +41,7 @@ const Footer = () => {
       {/* Developers Section */}
       <div className="flex-grow">
             <div className="flex flex-col items-center sm:items-end">
-              <h1 className="font-sans mb-3 text-center sm:text-right text-neutral-100">Developed By:</h1>
+              <h1 className="font-sans mb-3 text-center mr-28 text-neutral-100">Developed By:</h1>
               <div className="flex flex-wrap justify-center sm:justify-end pb-3 gap-2">
                 <a href="https://www.linkedin.com/in/nitin-kumar-jha" target="_blank" rel="noopener noreferrer">
                   <div className="relative group">

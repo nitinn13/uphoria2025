@@ -32,18 +32,21 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen overflow-hidden bg-uphoriadark bg-cover bg-center bg-fixed text-white font-times " >
-        <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/sponsors" element={<Sponsors/>} />
+          <Route path="/sponsors" element={<Sponsors />} />
           {/* <Route path="/temp" element={<TempHome />} /> */}
 
           <Route path="/category/:categoryId" element={<EventCategory />} />
         </Routes>
-        <Footer />
+        
+          <Footer />
+        
+
       </div>
     </Router>
   );
