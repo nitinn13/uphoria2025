@@ -115,14 +115,14 @@ const Team = () => {
           return (
             <div key={category.id} className="mb-8">
               {/* Category Header */}
-              {/* <div className="relative mb-12 flex justify-center items-center">
+              <div className="relative mb-12 flex justify-center items-center">
                 <div className="border-t border-pink-500/30 flex-grow"></div>
                 <div className="px-4 mx-2  flex items-center space-x-3">
                   <category.icon className="h-8 w-8 text-pink-400" />
                   <h2 className="text-3xl font-bold text-pink-100">{category.name}</h2>
                 </div>
                 <div className="border-t border-pink-500/30 flex-grow"></div>
-              </div> */}
+              </div>
 
               {/* Team Members Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
