@@ -15,6 +15,7 @@ import Timeline from '../components/Timeline';
 import Contactinfo from '../components/Contactinfo';
 import animatedlogo from '../assets/animatedlogo.mp4';
 import animatedlogoMobile from '../assets/animatedlogomobilecomp.mp4';
+import FloatingCircleLink from '../components/ThreeD';
 
 // Move Artists to lazy loading only
 const Artists = lazy(() => import('../components/Artists'));
@@ -191,6 +192,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section>
+      <FloatingCircleLink href="https://tour.panoee.net/67a8edc1ab8f08957116801f" size="lg" imgSrc='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficon-library.com%2Fimages%2Ficon-3d%2Ficon-3d-11.jpg&f=1&nofb=1&ipt=af746eb3a71fb9cc7b360177be76a07a30676d7d3b8efd5eb427c6518641bbf4&ipo=images' imgAlt='Drone view'>
+ 
+</FloatingCircleLink>
+      </section>
 
       {/* Artists Section */}
       <Suspense fallback={<div>Loading artists...</div>}>
